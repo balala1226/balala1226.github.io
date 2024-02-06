@@ -174,3 +174,14 @@ body {
 	flex: 2.3;
 }
 
+.number:hover {
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+}
+
+.removeValue:hover {
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+}
+
+.operator:hover {
+	box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.3);
+}
