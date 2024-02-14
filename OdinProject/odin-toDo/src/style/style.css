@@ -1,0 +1,395 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* end reset */
+
+body {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    background-color: #bfdbfe;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #082f49;
+    height: 10vh;
+}
+
+header p {
+    font-size: 5vmin;
+    font-weight: bold;
+    color: white;
+}
+
+#content {
+    display: flex;
+}
+
+#sidePanel {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    background-color: #3b82f6;
+    width: 20vw;
+    height: 100%;
+    position: fixed;
+}
+
+#profile {
+    display: flex;
+    margin-bottom: 10%;
+    align-items: center;
+}
+
+#profile img {
+    max-width: 5vmin;
+    max-height: 5vmin;
+    margin-right: 2%;
+}
+
+#profile p {
+    font-size: 3vmin;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+} 
+
+#projectsHeaderContainer {
+    margin-bottom: 5%;
+}
+
+#projectsHeaderContainer p {
+    font-size: 4vmin;
+    font-weight: bold;
+}
+
+#projectsList {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+
+.projectItem {
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+
+.projectItem p {
+    font-size: 3vmin;
+}
+
+.projectItem:hover {
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+#newProjectContainer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3vmin;
+    height: 12vh;
+}
+
+#projectNameInputBox {
+    margin-top: 2%;
+}
+
+#newProjectFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#newProjectButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vmin;
+    height: 10vmin;
+}
+
+#newProjectButtons button {
+    border: transparent;
+    border-radius: 10%;
+}
+
+#newProjectButtons button:hover {
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+#addProjectContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addProjectContainer img {
+    max-width: 4vmin;
+    max-height: 4vmin;
+    margin-right: 1%;
+}
+
+#addProjectContainer p {
+    font-size: 3vmin;
+}
+
+#addProjectContainer:hover {
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+#mainPanel {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    position: relative;
+    left: 22%;
+    width: 70%;
+}
+
+#projectName {
+    font-size:4vmin;
+    font-weight: bold;
+}
+
+#taskContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+}
+
+.taskItemCollapse {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e40af;
+    border:transparent;
+    border-radius: 10%;
+    margin-bottom: 3%;
+}
+
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.taskBody {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.taskHeaderEdit {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.taskHeaderEdit div{
+    display: flex;
+    align-items: center;
+}
+
+.taskHeaderEdit div p{
+    margin-right: 2%;
+}
+
+.taskTitleDiv {
+    display: flex;
+    width: 40%;
+}
+
+.taskDateDiv {
+    width: 30%;
+}
+
+.taskBodyEdit {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1%;
+    flex-direction: column;
+}
+
+.taskBodyEdit p {
+    margin-bottom: 2%;
+}
+
+.taskEditActions {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.taskInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+}
+
+.taskInfo p {
+    margin-right: 5%;
+    font-size:3vmin;
+}
+
+.taskName {
+    font-weight: bold;
+}
+
+.taskNameEditInput {
+    width: 100%
+}
+
+.taskDescriptionEditInput {
+    height: 20vh;
+    width: 100%
+}
+
+.priority0Color {
+    background-color: darkred;
+}
+
+.priority1Color {
+    background-color: darkorange;
+}
+
+.priority2Color {
+    background-color: darkgreen;
+}
+
+.priorityTag {
+    color: white;
+}
+
+.taskItemActions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+}
+
+.taskEditButton {
+    width: 5vmin;
+    height: 5vmin;
+    margin-left: 2%;
+    background-color: transparent;
+    border: transparent;
+}
+
+.taskEditButton img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.taskEditButton:hover {
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.taskButton {
+    width: 5vmin;
+    height: 5vmin;
+    background-color: transparent;
+    border: transparent;
+}
+
+.taskButton img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.taskButton:hover {
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+#createTaskContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#createTaskContainer img {
+    max-width: 4vmin;
+    max-height: 4vmin;
+    margin-right: 1%;
+}
+
+#createTaskContainer p {
+    font-size: 3vmin;
+}
+
+#createTaskContainer:hover {
+	box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
